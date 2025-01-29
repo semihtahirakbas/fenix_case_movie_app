@@ -1,7 +1,7 @@
 class MovieModel {
   final int id;
   final bool isAdult;
-  final List<int> genreIds;
+  final List<dynamic> genreIds;
   final String title;
   final String overView;
   final String posterPath;
@@ -14,10 +14,10 @@ class MovieModel {
   factory MovieModel.fromMap(Map<String, dynamic> map) => MovieModel(
       map["id"],
       map["adult"],
-      map['genre_ids'],
+      map['genre_ids'] ?? [],
       map['title'],
       map['overview'],
       map['poster_path'],
-      map['vote_average'],
-      map['vote_count']);
+      map['vote_average'] ?? -1,
+      map['vote_count'] ?? -1);
 }

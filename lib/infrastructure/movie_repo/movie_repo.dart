@@ -3,7 +3,9 @@ import 'package:fenix_case_movie_app/core/http_statu/http_statu.dart';
 import 'package:fenix_case_movie_app/domain/movie/movie_model.dart';
 import 'package:fenix_case_movie_app/infrastructure/client/dio_client.dart';
 import 'package:fenix_case_movie_app/utility/app_url/app_url.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class MovieRepo {
   final client = DioClient();
   Future<Either<HttpStatu, List<MovieModel>?>> getSearchedMovies(
