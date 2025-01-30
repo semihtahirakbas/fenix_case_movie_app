@@ -28,6 +28,7 @@ class MovieCubitCubit extends Cubit<MovieCubitState> {
       emit(MovieFetched(
           movies: result.movies,
           totalPage: result.totalPage,
+          currentPage: page,
           isMoreItemFetching: false));
     });
   }
@@ -46,8 +47,10 @@ class MovieCubitCubit extends Cubit<MovieCubitState> {
       List<MovieModel> addedItems = List.of((state as MovieFetched).movies)
         ..addAll(result.movies);
       debugPrint(addedItems.length.toString());
-      emit((state as MovieFetched)
-          .copyWith(movies: addedItems, isMoreItemFetching: false));
+      emit(
+        (state as MovieFetched).copyWith(
+            movies: addedItems, isMoreItemFetching: false, currentPage: page),
+      );
     });
   }
 }

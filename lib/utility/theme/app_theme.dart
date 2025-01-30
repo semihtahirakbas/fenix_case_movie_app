@@ -13,9 +13,9 @@ ThemeData appThemeData() => ThemeData(
         minVerticalPadding: 2,
         horizontalTitleGap: 0),
     progressIndicatorTheme:
-        const ProgressIndicatorThemeData(color: Colors.blue),
+        const ProgressIndicatorThemeData(color: AppColor.accentColor),
     scaffoldBackgroundColor: AppColor.primaryColor,
-    indicatorColor: Colors.blue,
+    indicatorColor: AppColor.accentColor,
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
     splashFactory: NoSplash.splashFactory,

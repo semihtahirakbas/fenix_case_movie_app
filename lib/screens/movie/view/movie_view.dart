@@ -95,10 +95,18 @@ class _MovieViewState extends State<MovieView> {
                                       crossAxisCount: 2,
                                       childAspectRatio: 3 / 4,
                                       children: List.generate(
-                                          state.movies.length,
-                                          (index) => MovieItemWidget(
-                                              movieModel:
-                                                  state.movies[index]))),
+                                          state.currentPage < state.totalPage
+                                              ? state.movies.length + 1
+                                              : state.movies.length, (index) {
+                                        if (index < state.movies.length) {
+                                          return MovieItemWidget(
+                                              movieModel: state.movies[index]);
+                                        } else {
+                                          return const Center(
+                                            child: CircularProgressIndicator(),
+                                          );
+                                        }
+                                      })),
                                 )
                               : SliverToBoxAdapter(
                                   child: Container(

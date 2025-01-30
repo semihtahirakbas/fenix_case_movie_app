@@ -18,14 +18,12 @@ class MovieItemWidget extends StatelessWidget {
             child: ClipRRect(
               borderRadius:
                   const BorderRadius.vertical(top: Radius.circular(15)),
-              child: Container(
-                decoration: const BoxDecoration(color: Colors.orange),
-                child: Image.network(
-                  "${AppURL.baseImageURL}/${movieModel.posterPath}",
-                  fit: BoxFit.fill,
-                  width: 200,
-                  errorBuilder: (context, error, stackTrace) =>
-                      Text("Resim Yok"),
+              child: Image.network(
+                "${AppURL.baseImageURL}/${movieModel.posterPath}",
+                fit: BoxFit.fill,
+                width: MediaQuery.of(context).size.width,
+                errorBuilder: (context, error, stackTrace) => const Center(
+                  child: Icon(Icons.image),
                 ),
               ),
             ),
