@@ -1,16 +1,23 @@
-# fenix_case_movie_app
+# Fenix Case
 
-A new Flutter project.
+
+## Description
+
+A Flutter project utilizing various libraries like Dio, Flutter Bloc, Dartz, GetIt, Injectable, and Flutter Dotenv to handle API requests, state management, and environment configuration.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Dependencies
 
-A few resources to get you started if this is your first Flutter project:
+Before you begin, make sure you have the following installed:
+* **Flutter** - Make sure you have Flutter installed. You can follow the installation guide here: [Flutter Installation](https://flutter.dev/docs/get-started/install).
+* **Dart** - Comes with Flutter SDK.
+* **Git** - You’ll need Git to clone the project.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installing
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To get started, first clone the repository:
+
+```bash
+git clone https://github.com/yourusername/projectname.git
+cd projectname
