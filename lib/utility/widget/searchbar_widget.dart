@@ -17,12 +17,19 @@ class _SearchbarWidgetState extends State<SearchbarWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autocorrect: false,
       cursorColor: AppColor.appTextColor,
       controller: widget.controller,
       onFieldSubmitted: (value) {
+        if (value.isEmpty) {
+          return;
+        }
         widget.onSearch.call(value);
       },
       onChanged: (value) {
+        if (value.length >= 2) {
+          widget.onSearch.call(value);
+        }
         setState(() {
           canClear = value.isNotEmpty;
         });

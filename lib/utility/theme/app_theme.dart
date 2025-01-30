@@ -76,16 +76,16 @@ InputDecorationTheme inputDecorationTheme() => InputDecorationTheme(
       filled: true,
       suffixIconColor: const Color.fromRGBO(172, 181, 187, 1),
       focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: AppColor.primaryColor, width: 0.5),
+          borderSide: BorderSide(color: AppColor.accentColor, width: 0.5),
           borderRadius: BorderRadius.all(Radius.circular(5))),
       enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: AppColor.primaryColor, width: 0.5),
+          borderSide: BorderSide(color: AppColor.accentColor, width: 0.5),
           borderRadius: BorderRadius.all(Radius.circular(5))),
-      disabledBorder: const OutlineInputBorder(
-          borderSide:
-              BorderSide(color: Color.fromRGBO(155, 155, 155, 0.1), width: 0.5),
-          borderRadius: BorderRadius.all(Radius.circular(10))),
-      errorBorder: OutlineInputBorder(
+      disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+              color: AppColor.accentColor.withOpacity(0.5), width: 0.5),
+          borderRadius: const BorderRadius.all(Radius.circular(10))),
+      errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.red),
           borderRadius: BorderRadius.all(Radius.circular(10))),
       errorStyle:

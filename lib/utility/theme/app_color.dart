@@ -8,4 +8,6 @@ class AppColor {
   static const appTextColor = Color.fromRGBO(34, 34, 34, 1);
   static const primaryColor = Color.fromRGBO(248, 248, 248, 1);
   static const secondaryColor = Color.fromRGBO(255, 255, 255, 1);
+
+  static const accentColor = Color.fromRGBO(34, 34, 34, 0.3);
 }

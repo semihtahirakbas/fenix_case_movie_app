@@ -1,4 +1,5 @@
 import 'package:fenix_case_movie_app/domain/movie/movie_model.dart';
+import 'package:fenix_case_movie_app/utility/app_url/app_url.dart';
 import 'package:fenix_case_movie_app/utility/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,6 @@ class MovieItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const baseImageURL = "https://image.tmdb.org/t/p/w220_and_h330_face";
     return Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,9 +21,11 @@ class MovieItemWidget extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(color: Colors.orange),
                 child: Image.network(
-                  "$baseImageURL/${movieModel.posterPath}",
+                  "${AppURL.baseImageURL}/${movieModel.posterPath}",
                   fit: BoxFit.fill,
                   width: 200,
+                  errorBuilder: (context, error, stackTrace) =>
+                      Text("Resim Yok"),
                 ),
               ),
             ),

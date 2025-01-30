@@ -12,4 +12,6 @@ class HttpFailure extends HttpStatu {
   HttpFailure({required this.failure});
 }
 
-class HttpUnexpected extends HttpStatu {}
+class HttpUnexpected extends HttpFailure {
+  HttpUnexpected({required super.failure});
+}
