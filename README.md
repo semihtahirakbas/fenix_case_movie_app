@@ -19,5 +19,27 @@ Before you begin, make sure you have the following installed:
 To get started, first clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/projectname.git
-cd projectname
+git clone https://github.com/semihtahirakbas/fenix_case_movie_app
+cd fenix_case_movie_app
+```
+
+Second, you have to set your API key to .env file:
+
+```
+.env
+API_KEY=your_api_key
+```
+
+### Initializing
+
+To initialize the project, first get the dependencies:
+
+```bash
+flutter pub get
+```
+
+Then, to run the project.
+
+```bash
+flutter run
+```
